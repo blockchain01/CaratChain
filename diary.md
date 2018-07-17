@@ -12,7 +12,7 @@
  > - 2 imtoken2.0版本：可能由於地區限制，未能成功連線到imtoken網站提交資料。
  
 ## 20180718
- > 測試BUG
+ > 測試功能完成
  
  > 測試鏈地址
  
@@ -38,7 +38,7 @@
  
  - 10 . approveAndCall  受權其他dapp使用
  
- - 1 . transfer       K  轉帳
+ - 1 . transfer         轉帳
  
  
  
@@ -47,23 +47,6 @@
  > ERC-20token完成並交貨
  
  ------
-
-
-
-# ERC-20token功能測試
-
-於 `metamask` 交易及顯示 OK
-
-
-
-
- ------
- 
-
-
-
-
-
 
 
 
