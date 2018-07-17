@@ -35,4 +35,25 @@
  
  Test add
  0x53154d8b68d52e9fa000548dcd08071082e4e8ee
+ 
+ totalSupply    K 總發行量
+ symbol         K 圖示
+ name           k 名稱
+ allowance      k 查看受權額度
+ decimals       k 小數位
+ balanceOf      k 戶口
+ burn
+ tranferFrom
+ approve        k  受權額度給其他人
+ approveAndCall
+ transfer
+
+
+
+
+
+
+
+
+
 
