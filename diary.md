@@ -38,7 +38,7 @@
  
  - 10 . approveAndCall  受權其他dapp使用
  
- - 1 . transfer         轉帳
+ - 11 . transfer         轉帳
  
  
  
