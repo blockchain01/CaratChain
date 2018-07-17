@@ -21,3 +21,10 @@
  > ERC-20token完成並交貨
  
  ------
+
+
+
+# ERC-20token功能測試
+
+於 `metamask` 交易及顯示 OK
+
