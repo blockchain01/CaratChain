@@ -56,7 +56,7 @@
  
  approveAndCall
  
- transfer
+ transfer       K  轉帳
 
 
 
