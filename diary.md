@@ -11,8 +11,34 @@
  > - 1 未能成功，imtoken1.0版本沒有此功能
  > - 2 imtoken2.0版本：可能由於地區限制，未能成功連線到imtoken網站提交資料。
  
+## 20180718
+ > 測試BUG
  
+ > 測試鏈地址
  
+ 0x53154d8b68d52e9fa000548dcd08071082e4e8ee
+ 
+ - 1 . totalSupply      總發行量
+ 
+ - 2 . symbol           圖示
+ 
+ - 3 . name             名稱
+ 
+ - 4 . allowance        查看受權額度
+ 
+ - 5 . decimals         小數位
+ 
+ - 6 . balanceOf        戶口
+ 
+ - 7 . burn             銷毀自己的代幣
+ 
+ - 8 . tranferFrom      受權額度轉帳
+ 
+ - 9 . approve          受權額度給其他人
+ 
+ - 10 . approveAndCall  受權其他dapp使用
+ 
+ - 1 . transfer       K  轉帳
  
  
  
@@ -33,30 +59,7 @@
 
  ------
  
- Test add
- 0x53154d8b68d52e9fa000548dcd08071082e4e8ee
- 
- totalSupply    K 總發行量
- 
- symbol         K 圖示
- 
- name           k 名稱
- 
- allowance      k 查看受權額度
- 
- decimals       k 小數位
- 
- balanceOf      k 戶口
- 
- burn           k  銷毀自己的代幣
- 
- tranferFrom    k  受權額度轉帳
- 
- approve        k  受權額度給其他人
- 
- approveAndCall K 受權其他dapp使用
- 
- transfer       K  轉帳
+
 
 
 
