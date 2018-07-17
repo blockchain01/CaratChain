@@ -48,13 +48,13 @@
  
  balanceOf      k 戶口
  
- burn
+ burn           k  銷毀自己的代幣
  
  tranferFrom    k  受權額度轉帳
  
  approve        k  受權額度給其他人
  
- approveAndCall
+ approveAndCall K 受權其他dapp使用
  
  transfer       K  轉帳
 
