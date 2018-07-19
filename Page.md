@@ -66,4 +66,9 @@
  > - 4. 小數位     0
  
  
+ ## 技術代碼：
  
+ [請查閱github代碼庫](https://github.com/blockchain01/CaratChain/tree/master/solidity)
+ 
+ 
+ 2018-07-02:0644
