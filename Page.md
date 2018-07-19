@@ -27,7 +27,7 @@
  
  > Carat Chain會使用以太坊區塊鏈技術達成以上方案:
  
- ## 1. `Carat Chain`將會發行一種全新的`雙軌`代幣`CRT`。
+ ## 1. Carat Chain將會發行一種全新的`雙軌`代幣`CRT`。
  
  > - CRT共有兩版本，分別為：CRT-erc-20 及 CRT-erc-721。
  
