@@ -73,6 +73,7 @@
  
  ### CaratChainERC-20Token.sol
  
+ ```
  
  //版本聲明
 pragma solidity ^0.4.24;
@@ -229,6 +230,7 @@ contract caratchainTokenERC20 {
     }
 }
 
+```
 
  ------
  
