@@ -8,11 +8,16 @@ contract SetOwner{
 //合約持有人地址
     address public owner;
 //購買721價格 以SZABO計算,1000000SZABO=1Ether  
-    uint Price = 3000 szabo; 
-//1個ERC-20兌多少ERC-721匯率//預設1:1
-    uint8 ExchangeRate = 1; 
-//初始發設定合約持有人    
-    function SetOwner() { owner = msg.sender;}
+    uint public Price = 3000 szabo; 
+
+
+  
+    function SetOwner() { 
+//初始發設定合約持有人  
+        owner = msg.sender;
+        
+        
+    }
 }
 
 
@@ -44,13 +49,7 @@ Price = (InputPrice * 1 szabo);
 }
     
 
-//修改-匯率//預設1:1 //最大255
-function ChangeExchangeRate(uint8 NewExchangeRate) 
-//新匯率必須大於0
-JustOwner ExchangeRateRrule(NewExchangeRate) public{
-//匯率=新匯率
-ExchangeRate = NewExchangeRate;
-}
+
 
 
 
