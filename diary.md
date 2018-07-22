@@ -53,7 +53,7 @@
 
  > 測試鏈地址
  
-0x2d0cb6a1eadd7f6f4c2d7eaa462a63c0987a1316
+0xe68226c83a4fdc3bdd23af036c86a3ca48ffdbc0
 
  > 測試CC-Token721.sol功能
 
