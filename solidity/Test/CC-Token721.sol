@@ -57,6 +57,8 @@ contract caratchainTokenERC721 is BasicRules {
 
 
 
+////////////////////////////////////////////////////////////////////////合約功能
+
 //新增代幣
   function making721(string index) external payable{
     //入帳給owner  
