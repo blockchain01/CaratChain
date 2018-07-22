@@ -9,18 +9,26 @@ contract SetOwner{
     address public owner;
 //購買721價格 以SZABO計算,1000000SZABO=1Ether  
     uint Price = 3000 szabo; 
+//1個ERC-20兌多少ERC-721匯率//預設1:1
+    uint8 ExchangeRate = 1; 
 //初始發設定合約持有人    
     function SetOwner() { owner = msg.sender;}
-    
 }
 
+
+/////////////////////////////////////////////////////////////////////////規則
 contract BasicRules is SetOwner{
+
 //驗證持有人,不是持有人則消耗GAS但取消所有動作
-    modifier JustOwner() {assert(msg.sender == owner);  _;}
+ modifier JustOwner() {assert(msg.sender == owner);  _;}
     
 //新Owner不能是0,是0則取消所有動作
- modifier AddRrule(address _T) {require(address(0x0) != _T);  _;}   
+ modifier AddRrule(address _T) {require(address(0x0) != _T);  _;}
+ 
+//新匯率必須大於0||少於0則取消所有動作
+ modifier ExchangeRateRrule(uint _E) {require(0 < _E);  _;}
 }
+
 
 
 /////////////////////////////////////////////////////////////持有人修改合約資料
@@ -29,11 +37,21 @@ contract Admin is BasicRules {
 
 //修改-購買721價格 以SZABO計算,1000000SZABO=1Ether     
 function ChangePrice(uint InputPrice) 
-//驗證持有人
-JustOwner public{
+//驗證持有人//價格必須大於0
+JustOwner ExchangeRateRrule(InputPrice) public{
 //價格=新價格 以SZABO計算,1000000SZABO=1Ether    
-         Price = (InputPrice * 1 szabo);
-    }
+Price = (InputPrice * 1 szabo);
+}
+    
+
+//修改-匯率//預設1:1 //最大255
+function ChangeExchangeRate(uint8 NewExchangeRate) 
+//新匯率必須大於0
+JustOwner ExchangeRateRrule(NewExchangeRate) public{
+//匯率=新匯率
+ExchangeRate = NewExchangeRate;
+}
+
 
 
 //修改-合約持有人 
@@ -41,10 +59,19 @@ function ChangeAdmin(address NewOwner)
 //新Owner不能是0
 JustOwner AddRrule(NewOwner) public{
 //Owner=新Owner
-         owner = NewOwner;
-    }
+owner = NewOwner;
+}
+
+
+
     
 }
+
+
+
+
+
+
 
 
 
