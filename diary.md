@@ -61,17 +61,17 @@
  > 測試CC-Token721.sol功能
 
  
- - 1 . totalSupply      總發行量K
+ - 1 . totalSupply      總發行量
  
- - 2 . symbol           圖示k
+ - 2 . symbol           圖示
  
- - 3 . name             名稱k
+ - 3 . name             名稱
  
  - 4 . allowance        查看受權額度
  
- - 5 . decimals         小數位k
+ - 5 . decimals         小數位
  
- - 6 . balanceOf        戶口K
+ - 6 . balanceOf        戶口
  
  - 7 . burn             銷毀自己的代幣
  
@@ -87,18 +87,18 @@
 
  - 13 . err burn         防止銷毀超過自己的持有量
 
- - 14 . CCindex          獨立網址K
+ - 14 . CCindex          獨立網址
 
- - 15 . BuyPrice         購買費用k
+ - 15 . BuyPrice         購買費用
  
  - 16 . making721        購買721代幣
   
- - 17 . ChangePrice      修改-購買721價格K
+ - 17 . ChangePrice      修改-購買721價格
 
- - 18 . ChangeAdmin      修改-合約持有人 K
+ - 18 . ChangeAdmin      修改-合約持有人 
  
- - 19 . ChangePrice      非Admin-修改-購買721價格K
+ - 19 . ChangePrice      非Admin-修改-購買721價格
 
- - 20 . ChangeAdmin      非Admin-修改-合約持有人 K
+ - 20 . ChangeAdmin      非Admin-修改-合約持有人 
  
- - 21 .       一戶多幣
+ - 21 . MyTokenList      一戶多幣
