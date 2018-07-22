@@ -51,6 +51,8 @@
 
 ## 20180722
 
+ > 測試鏈地址
+ 
 0x2d0cb6a1eadd7f6f4c2d7eaa462a63c0987a1316
 
  > 測試CC-Token721.sol功能
