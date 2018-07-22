@@ -90,6 +90,10 @@
  
  - 16 . making721        購買721代幣
   
- - 17 . ChangePrice      修改-購買721價格
+ - 17 . ChangePrice      修改-購買721價格K
 
- - 18 . ChangeAdmin      修改-合約持有人 
+ - 18 . ChangeAdmin      修改-合約持有人 K
+ 
+ - 19 . ChangePrice      非Admin-修改-購買721價格K
+
+ - 20 . ChangeAdmin      非Admin-修改-合約持有人 K
