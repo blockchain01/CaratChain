@@ -55,10 +55,13 @@
  
 0xddcba132cd10a7ec00f43b3abba3bde94af2d8ae
 
+29.866 
+
+
  > 測試CC-Token721.sol功能
 
  
- - 1 . totalSupply      總發行量
+ - 1 . totalSupply      總發行量K
  
  - 2 . symbol           圖示k
  
@@ -68,7 +71,7 @@
  
  - 5 . decimals         小數位k
  
- - 6 . balanceOf        戶口
+ - 6 . balanceOf        戶口K
  
  - 7 . burn             銷毀自己的代幣
  
@@ -84,7 +87,7 @@
 
  - 13 . err burn         防止銷毀超過自己的持有量
 
- - 14 . CCindex          獨立網址
+ - 14 . CCindex          獨立網址K
 
  - 15 . BuyPrice         購買費用k
  
@@ -97,3 +100,5 @@
  - 19 . ChangePrice      非Admin-修改-購買721價格K
 
  - 20 . ChangeAdmin      非Admin-修改-合約持有人 K
+ 
+ - 21 .       一戶多幣
