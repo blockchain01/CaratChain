@@ -60,13 +60,13 @@
  
  - 1 . totalSupply      總發行量
  
- - 2 . symbol           圖示
+ - 2 . symbol           圖示k
  
- - 3 . name             名稱
+ - 3 . name             名稱k
  
  - 4 . allowance        查看受權額度
  
- - 5 . decimals         小數位
+ - 5 . decimals         小數位k
  
  - 6 . balanceOf        戶口
  
@@ -86,7 +86,7 @@
 
  - 14 . CCindex          獨立網址
 
- - 15 . BuyPrice         購買費用
+ - 15 . BuyPrice         購買費用k
  
  - 16 . making721        購買721代幣
   
