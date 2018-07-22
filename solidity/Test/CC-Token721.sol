@@ -6,10 +6,10 @@ import "./CC-Rules.sol";
 
 
 //InterfaceERC-20合約
-interface InterfaceTocontract {
-  function balance(address _myAddress) public view returns (uint);
-  function burn(uint256 _value) public returns (bool success);
-}
+//interface InterfaceTocontract {
+//  function balance(address _myAddress) public view returns (uint);
+//  function burn(uint256 _value) public returns (bool success);
+//}
 
 //外部使用受權
 interface tokenRecipient { function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) external; }
@@ -22,8 +22,8 @@ contract caratchainTokenERC721 is BasicRules {
 
 
 //記錄舊合約地址  
-  address InterfaceToAdd = 0x72a9AB77a54461AC1b30A788a8F969cd56ef11b3;
-  InterfaceTocontract ToThisContract = InterfaceTocontract(InterfaceToAdd);
+//  address InterfaceToAdd = OutAdd0x0...;
+//  InterfaceTocontract ToThisContract = InterfaceTocontract(InterfaceToAdd);
 
 ///////////////////////////////////////////////////////////////////////// event
 
@@ -39,8 +39,8 @@ contract caratchainTokenERC721 is BasicRules {
 ////////////////////////////////////////////////////////////////////////基本資料
 
 //名,符號,小數,總量
-    string public name;
-    string public symbol;
+    string public name = "Carat Chain" ;
+    string public symbol = "CRT";
     uint8 public decimals = 0;
     uint256 public totalSupply;
     
@@ -51,6 +51,9 @@ contract caratchainTokenERC721 is BasicRules {
 
 //獨立網址
     mapping (address => string) public CCindex;
+
+//購買費用
+    mapping (address => uint256) public BuyPrice;
     
 //受權額度  
     mapping (address => mapping (address => uint256)) public allowance;
@@ -59,7 +62,76 @@ contract caratchainTokenERC721 is BasicRules {
 
 ////////////////////////////////////////////////////////////////////////合約功能
 
-//新增代幣
+
+//受權額度給其他人
+    function approve(
+        address _spender, //被受權者戶口
+        uint256 _value    //受權額
+    ) public
+        returns (bool success) {
+        allowance[msg.sender][_spender] = _value;  //記錄受權額
+        emit Approval(msg.sender, _spender, _value);  //受權時通知區塊
+        return true;   //成功通知
+    }
+
+//在其他DAPP顯示
+    function approveAndCall(
+        address _spender,  //被受權者戶口
+        uint256 _value,    //受權額
+        bytes _extraData   //受權者留言
+    ) public
+        returns (bool success) {
+//被受權者戶口可在其他DAPP使用
+        tokenRecipient spender = tokenRecipient(_spender);
+//如果有被受權
+        if (approve(_spender, _value)) {
+//將資料記錄在被受權者戶口(受權者'我',受權額,本合約地址,受權者留言)
+            spender.receiveApproval(msg.sender, _value, this, _extraData);
+            return true; //成功通知
+        }
+    }
+
+
+
+
+//轉帳
+    function transfer(
+        address _to,      //收帳人
+        uint256 _value    //轉帳額
+    ) public returns (bool success) {
+//轉帳時的數據進入內部功能
+        _transfer(msg.sender, _to, _value);
+        return true;      //成功通知
+    }
+
+//受權額度轉帳
+    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
+//轉帳額少於受權額度
+        require(_value <= allowance[_from][msg.sender]);
+//受權轉帳額度減轉帳額
+        allowance[_from][msg.sender] -= _value;
+//轉帳時的數據進入內部功能
+        _transfer(_from, _to, _value);
+        return true;     //成功通知
+    }
+
+
+//銷毀TOKEN
+    function burn(uint256 _value) public returns (bool success) {
+//銷毀量少於戶口現有額
+        require(balanceOf[msg.sender] >= _value); 
+//在我的戶口中銷毀
+        balanceOf[msg.sender] -= _value;  
+//在總量中減少
+        totalSupply -= _value; 
+//燒毀時通知區塊
+        emit Burn(msg.sender, _value);
+        return true;  //成功通知
+    }
+    
+
+
+//購買721代幣
   function making721(string index) external payable{
     //入帳給owner  
     owner.transfer(msg.value);
@@ -67,28 +139,49 @@ contract caratchainTokenERC721 is BasicRules {
     require(msg.value > Price || msg.value == Price);  
     //進入內部功能-新增代幣
     NewToken(msg.sender,index,msg.value);
-
   }
 
 
+
+
+
+////////////////////////////////////////////////////////////////////////內部功能
+
+//購買721代幣內部功能
   function NewToken(address _A,string _I,uint _V) private{
-
-
-
+    //總量+1
+    totalSupply++;
+    //戶口+1
+    balanceOf[_A]++;
+    //獨立網址
+    CCindex[_A] = _I;
+    //購買費用
+    BuyPrice[_A] = _V;
   }
 
 
-  function exchange721() public view returns (uint num) {
 
-//重點//重點//重點//重點//重點//重點//重點//重點//重點//重點
-//ToThisContract.舊約功能名(拿這個ADD入去);//uint num = 將舊約的數據,記在本功能
-    uint num = ToThisContract.getNum(msg.sender);
-//重點//重點//重點//重點//重點//重點//重點//重點//重點//重點
+//轉帳時的內部功能
+    function _transfer(address _from, address _to, uint _value) internal {
+//防止轉到地址0
+    require(_to != address(0x0));
+//轉帳額少於戶口現有額
+        require(balanceOf[_from] >= _value);
+//收帳後必須大於收帳前
+        require(balanceOf[_to] + _value >= balanceOf[_to]);
+// 發送者戶口+收帳戶口額量,用於比較結果
+        uint previousBalances = balanceOf[_from] + balanceOf[_to];
+// 發送者戶減少發送量
+        balanceOf[_from] -= _value;
+// 收帳戶戶堵增加發送量
+        balanceOf[_to] += _value;
+// 轉帳時通知區塊    
+        emit Transfer(_from, _to, _value);
+//轉帳完成比較previousBalances,如不同則消耗GAS但取消所有轉帳動作
+        assert(balanceOf[_from] + balanceOf[_to] == previousBalances);
+    }
+    
 
-//return唔洗解吧
-    return num;
-
-  }
 }
 
 
