@@ -49,8 +49,45 @@
  
  ------
 
+## 20180722
 
+0x2d0cb6a1eadd7f6f4c2d7eaa462a63c0987a1316
 
+ > 測試CC-Token721.sol功能
 
+ 
+ - 1 . totalSupply      總發行量
+ 
+ - 2 . symbol           圖示
+ 
+ - 3 . name             名稱
+ 
+ - 4 . allowance        查看受權額度
+ 
+ - 5 . decimals         小數位
+ 
+ - 6 . balanceOf        戶口
+ 
+ - 7 . burn             銷毀自己的代幣
+ 
+ - 8 . tranferFrom      受權額度轉帳
+ 
+ - 9 . approve          受權額度給其他人
+ 
+ - 10 . approveAndCall  受權其他dapp使用
+ 
+ - 11 . transfer         轉帳
+ 
+ - 12 . err burn         防止自己不持有時銷毀
 
+ - 13 . err burn         防止銷毀超過自己的持有量
 
+ - 14 . CCindex          獨立網址
+
+ - 15 . BuyPrice         購買費用
+ 
+ - 16 . making721        購買721代幣
+  
+ - 17 . ChangePrice      修改-購買721價格
+
+ - 18 . ChangeAdmin      修改-合約持有人 
