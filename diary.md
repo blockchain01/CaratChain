@@ -53,9 +53,10 @@
 
  > 測試鏈地址
  
-0xddcba132cd10a7ec00f43b3abba3bde94af2d8ae
+0xde6c197c45fec817fc1155064a65085245163e98
 
-29.866 
+Account 7
+21.946
 
 
  > 測試CC-Token721.sol功能
@@ -63,15 +64,15 @@
  
  - 1 . totalSupply      總發行量
  
- - 2 . symbol           圖示
+ - 2 . symbol           圖示 k
  
- - 3 . name             名稱
+ - 3 . name             名稱 k
  
  - 4 . allowance        查看受權額度
  
- - 5 . decimals         小數位
+ - 5 . decimals         小數位 k
  
- - 6 . balanceOf        戶口
+ - 6 . balanceOf        戶口 k
  
  - 7 . burn             銷毀自己的代幣
  
@@ -89,7 +90,7 @@
 
  - 14 . CCindex          獨立網址
 
- - 15 . BuyPrice         購買費用
+ - 15 . BuyPrice         購買費用 k
  
  - 16 . making721        購買721代幣
   
