@@ -53,53 +53,70 @@
 
  > 測試鏈地址
  
-0xde6c197c45fec817fc1155064a65085245163e98
+0xa9d9d8279cdbdc12973b8ed13eb3fcd5c0f15d9d
 
-Account 7
-21.946
+0x38b45e54063e72dcb0059961d6a0697eab5f51c6
 
+7.408 ETH
 
  > 測試CC-Token721.sol功能
 
- 
- - 1 . totalSupply      總發行量
- 
- - 2 . symbol           圖示 k
- 
- - 3 . name             名稱 k
- 
- - 4 . allowance        查看受權額度
- 
- - 5 . decimals         小數位 k
- 
- - 6 . balanceOf        戶口 k
- 
- - 7 . burn             銷毀自己的代幣
- 
- - 8 . tranferFrom      受權額度轉帳
- 
- - 9 . approve          受權額度給其他人
- 
- - 10 . approveAndCall  受權其他dapp使用
- 
- - 11 . transfer         轉帳
- 
- - 12 . err burn         防止自己不持有時銷毀
 
- - 13 . err burn         防止銷毀超過自己的持有量
+ - 1 . PurchaseRecord 我的購買記錄
 
- - 14 . CCindex          獨立網址
+ - 2 . owner    合約持有人 
 
- - 15 . BuyPrice         購買費用 k
+ - 3 . name             名稱 
  
- - 16 . making721        購買721代幣
-  
+ - 4 . MyList   購買/持有次數
+ 
+ - 5 . symbol           圖示 
+ 
+ - 6 . Price            購買費用 
+
+ - 7 . balanceOf        戶口 
+
+ - 8 . PublicTokenId  最新TokenId
+ 
+ - 8. 1 . CCindex          獨立網址
+
+ - 8. 2 . BuyPrice         購買費用 
+ 
+
+ - 9 . PublicTokenList  查看公眾TokenId數據
+
+ - 10 . allowance      查看受權額度
+ 
+ - 11 . totalSupply      總發行量
+ 
+ - 12 . decimals         小數位 
+
+
+*------*
+
+ - 13 . approve          受權額度給其他人
+ 
+ - 14 . tranferFrom      受權額度轉帳
+ 
+ - 15 . ChangeOwner      修改-合約持有人 
+ 
+ - 16 . ChangeOwner      非Admin-修改-合約持有人 
+ 
  - 17 . ChangePrice      修改-購買721價格
 
- - 18 . ChangeAdmin      修改-合約持有人 
+ - 18 . ChangePrice      非Admin-修改-購買721價格
  
- - 19 . ChangePrice      非Admin-修改-購買721價格
+ - 19 . making721        購買721代幣
+ 
+ - 20 . burn             限Admin-銷毀自己的代幣
+ 
+ - 21 . err burn         限Admin-防止自己不持有時銷毀
 
- - 20 . ChangeAdmin      非Admin-修改-合約持有人 
+ - 22 . err burn         限Admin-防止銷毀超過自己的持有量
  
- - 21 . MyTokenList      一戶多幣
+ - 23 . approveAndCall  受權其他dapp使用
+ 
+ - 24 . transfer         轉帳
+ 
+ 
+
