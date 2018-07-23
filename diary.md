@@ -84,8 +84,6 @@
  
  - 9 . PublicTokenList  查看公眾TokenId數據 K
 
- - 10 . allowance      查看受權額度 K
- 
  - 11 . totalSupply      總發行量 K
  
  - 12 . decimals         小數位 K
@@ -93,17 +91,15 @@
 
 *------*
 
- - 13 . approve          受權額度給其他人 K
- 
- - 14 . tranferFrom      受權額度轉帳
- 
- - 15 . ChangeOwner      修改-合約持有人 
- 
- - 16 . ChangeOwner      非Admin-修改-合約持有人 
- 
- - 17 . ChangePrice      修改-購買721價格
 
- - 18 . ChangePrice      非Admin-修改-購買721價格
+ 
+ - 15 . ChangeOwner      修改-合約持有人 K
+ 
+ - 16 . ChangeOwner      非Admin-修改-合約持有人 K
+ 
+ - 17 . ChangePrice      修改-購買721價格 K
+
+ - 18 . ChangePrice      非Admin-修改-購買721價格 K
  
  - 19 . making721        購買721代幣 K
  
@@ -112,11 +108,21 @@
  - 21 . err burn         限Admin-防止自己不持有時銷毀
 
  - 22 . err burn         限Admin-防止銷毀超過自己的持有量
- 
- - 23 . approveAndCall  受權其他dapp使用
- 
+  
  - 24 . transfer         轉帳 K 但只能用智能合約平台-如:MyEtherWallet.com
  
  - 24 . transfer         合約持有人收款 K
  
 
+
+
+
+ - 23 . approveAndCall  受權其他dapp使用----
+ 
+ - 10 . allowance      查看受權額度 ---
+ 
+ - 13 . approve          受權額度給其他人 ---
+ 
+ - 14 . tranferFrom      受權額度轉帳-----
+ 
+ 
