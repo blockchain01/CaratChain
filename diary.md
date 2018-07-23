@@ -51,73 +51,59 @@
 
 ## 20180723
 
+ > 測試功能完成
+ 
  > 測試鏈地址
  
 0xcc852f746d50f4d123489a336b30231f6e49a492
 
-(0x123)
+ - 1 . PurchaseRecord 我的購買記錄 
 
-36.630 
+ - 2 . owner    合約持有人 
 
-
- > 測試CC-Token721.sol功能
-
-
- - 1 . PurchaseRecord 我的購買記錄 K
-
- - 2 . owner    合約持有人 K
-
- - 3 . name             名稱 K
+ - 3 . name             名稱 
  
- - 4 . MyList   購買/持有次數 K
+ - 4 . MyList   購買/持有次數 
  
- - 5 . symbol           圖示 K
+ - 5 . symbol           圖示 
  
- - 6 . Price            購買費用 K
+ - 6 . Price            購買費用 
 
- - 7 . balanceOf        戶口 K
+ - 7 . balanceOf        戶口 
 
- - 8 . PublicTokenId  最新TokenId K
+ - 8 . PublicTokenId  最新TokenId 
  
- - 8. 1 . CCindex          獨立網址 K
+ - 9 .  CCindex          獨立網址 
 
- - 8. 2 . BuyPrice         購買費用  K
+ - 10 . BuyPrice         購買費用  
  
- - 9 . PublicTokenList  查看公眾TokenId數據 K
+ - 11 . PublicTokenList  查看公眾TokenId數據 
 
- - 11 . totalSupply      總發行量 K
+ - 12 . totalSupply      總發行量 
  
- - 12 . decimals         小數位 K
+ - 13 . decimals         小數位 
 
+ - 14 . approveAndCall  受權其他dapp使用 
+ 
+ - 15 . ChangeOwner      修改-合約持有人 
+ 
+ - 16 . ChangeOwner      非Admin-修改-合約持有人 
+ 
+ - 17 . ChangePrice      修改-購買721價格 
 
-*------*
+ - 18 . ChangePrice      非Admin-修改-購買721價格 
+ 
+ - 19 . making721        購買721代幣 
+ 
+ - 20 . burn             限Admin-銷毀自己的代幣 
+ 
+ - 21 . err burn         限Admin-防止自己不持有時銷毀 
 
-
- 
- - 15 . ChangeOwner      修改-合約持有人 K
- 
- - 16 . ChangeOwner      非Admin-修改-合約持有人 K
- 
- - 17 . ChangePrice      修改-購買721價格 K
-
- - 18 . ChangePrice      非Admin-修改-購買721價格 K
- 
- - 19 . making721        購買721代幣 K
- 
- - 20 . burn             限Admin-銷毀自己的代幣 K
- 
- - 21 . err burn         限Admin-防止自己不持有時銷毀 K
-
- - 22 . err burn         限Admin-防止銷毀超過自己的持有量 K
+ - 22 . err burn         限Admin-防止銷毀超過自己的持有量 
   
- - 24 . transfer         轉帳 K 但只能用智能合約平台-如:MyEtherWallet.com
+ - 23 . transfer         轉帳 K 但只能用智能合約平台-如:MyEtherWallet.com
  
- - 24 . transfer         合約持有人收款 K
- 
+ - 24 . transfer(payable)     合約持有人收款 
 
 
-
-
- - 23 . approveAndCall  受權其他dapp使用 
- 
  
