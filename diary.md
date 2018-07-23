@@ -55,7 +55,9 @@
  
 0xcc852f746d50f4d123489a336b30231f6e49a492
 
+(0x123)
 
+36.630 
 
 
  > 測試CC-Token721.sol功能
@@ -116,12 +118,6 @@
 
 
 
- - 23 . approveAndCall  受權其他dapp使用----
- 
- - 10 . allowance      查看受權額度 ---
- 
- - 13 . approve          受權額度給其他人 ---
- 
- - 14 . tranferFrom      受權額度轉帳-----
+ - 23 . approveAndCall  受權其他dapp使用 
  
  
