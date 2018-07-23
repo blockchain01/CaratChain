@@ -102,11 +102,11 @@
  
  - 19 . making721        購買721代幣 K
  
- - 20 . burn             限Admin-銷毀自己的代幣
+ - 20 . burn             限Admin-銷毀自己的代幣 K
  
- - 21 . err burn         限Admin-防止自己不持有時銷毀
+ - 21 . err burn         限Admin-防止自己不持有時銷毀 K
 
- - 22 . err burn         限Admin-防止銷毀超過自己的持有量
+ - 22 . err burn         限Admin-防止銷毀超過自己的持有量 K
   
  - 24 . transfer         轉帳 K 但只能用智能合約平台-如:MyEtherWallet.com
  
