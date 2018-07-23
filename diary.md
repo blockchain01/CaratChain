@@ -84,7 +84,7 @@
  
  - 9 . PublicTokenList  查看公眾TokenId數據 K
 
- - 10 . allowance      查看受權額度
+ - 10 . allowance      查看受權額度 K
  
  - 11 . totalSupply      總發行量 K
  
@@ -93,7 +93,7 @@
 
 *------*
 
- - 13 . approve          受權額度給其他人
+ - 13 . approve          受權額度給其他人 K
  
  - 14 . tranferFrom      受權額度轉帳
  
@@ -115,7 +115,7 @@
  
  - 23 . approveAndCall  受權其他dapp使用
  
- - 24 . transfer         轉帳
+ - 24 . transfer         轉帳 K 但只能用智能合約平台-如:MyEtherWallet.com
  
  - 24 . transfer         合約持有人收款 K
  
