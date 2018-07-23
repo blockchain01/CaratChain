@@ -53,43 +53,42 @@
 
  > 測試鏈地址
  
-0x77da71d8b4118e27c4da3566568aebf838312081
+0x17097e10e5c8ec2b1f24d2ed5768a8766a867c62
 
 0x38b45e54063e72dcb0059961d6a0697eab5f51c6
 
-7.408 ETH
+7.409 ET
 
  > 測試CC-Token721.sol功能
 
 
- - 1 . PurchaseRecord 我的購買記錄
+ - 1 . PurchaseRecord 我的購買記錄 K
 
- - 2 . owner    合約持有人 
+ - 2 . owner    合約持有人 K
 
- - 3 . name             名稱 
+ - 3 . name             名稱 K
  
- - 4 . MyList   購買/持有次數
+ - 4 . MyList   購買/持有次數 K
  
- - 5 . symbol           圖示 
+ - 5 . symbol           圖示 K
  
- - 6 . Price            購買費用 
+ - 6 . Price            購買費用 K
 
- - 7 . balanceOf        戶口 
+ - 7 . balanceOf        戶口 K
 
- - 8 . PublicTokenId  最新TokenId
+ - 8 . PublicTokenId  最新TokenId K
  
- - 8. 1 . CCindex          獨立網址
+ - 8. 1 . CCindex          獨立網址 K
 
- - 8. 2 . BuyPrice         購買費用 
+ - 8. 2 . BuyPrice         購買費用  K
  
-
- - 9 . PublicTokenList  查看公眾TokenId數據
+ - 9 . PublicTokenList  查看公眾TokenId數據 K
 
  - 10 . allowance      查看受權額度
  
- - 11 . totalSupply      總發行量
+ - 11 . totalSupply      總發行量 K
  
- - 12 . decimals         小數位 
+ - 12 . decimals         小數位 K
 
 
 *------*
@@ -106,7 +105,7 @@
 
  - 18 . ChangePrice      非Admin-修改-購買721價格
  
- - 19 . making721        購買721代幣
+ - 19 . making721        購買721代幣 K
  
  - 20 . burn             限Admin-銷毀自己的代幣
  
@@ -118,5 +117,6 @@
  
  - 24 . transfer         轉帳
  
+ - 24 . transfer         合約持有人收款 K
  
 
