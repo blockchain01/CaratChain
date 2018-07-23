@@ -55,9 +55,8 @@
  
 0x17097e10e5c8ec2b1f24d2ed5768a8766a867c62
 
-0x38b45e54063e72dcb0059961d6a0697eab5f51c6
 
-7.409 ET
+
 
  > 測試CC-Token721.sol功能
 
