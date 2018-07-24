@@ -114,10 +114,22 @@
  
  > 3-3 . totalSupply = CRT-erc-721的已經生產量
  
- > 3-4 . decimals
+ > 3-4 . decimals = 小數位
  
- > 3-5 . TokenDetails
+ > 3-5 . TokenDetails = 每一個CRT-erc-721的獨立數據
  
+   > TotalSupply = CRT-erc-721的已經生產量
+   
+   > NowTokenId = 正在查看的代幣的id
+   
+   > NowTokenIndex = 這個代幣的數據網址
+   
+   > ThisTokenBuyPrice = 這個代幣的購買價格
+   
+   > ThisTokenHoldings = 這個代幣的持有人地址
+
+  ![MyEtherWallet5](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-5.jpg "MyEtherWallet5")
+   
  > 3-6 . burn
  
  > 3-7 . PublicTokenId
