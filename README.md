@@ -96,9 +96,13 @@
   
  #### 其他方式：
  
- > 1 . 
+ > 1 . 請打開[網頁錢包MyEtherWallet](https://www.myetherwallet.com/#contracts)
  
- > 1 . 
+ ![MyEtherWallet1](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-1.jpg "MyEtherWallet1")
+ 
+ > 2 . 如圖示填寫合約地址及合約ABI | [複製ABI代碼](https://github.com/blockchain01/CaratChain/blob/master/ABI.code)
+ 
+ ![MyEtherWallet2](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-2.jpg "MyEtherWallet2")
  
  > 1 . 
  
