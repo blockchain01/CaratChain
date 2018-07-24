@@ -70,17 +70,30 @@
  
  ## 操作說明：
  
- ### 購買Carat Chain 代幣 CRT
+ ### 購買Carat Chain 代幣 CRT-erc-20
  
  > 1 . 請下載錢包程式imToken
  
  [imToken官方網站](https://token.im/download) | [IOS](https://itunes.apple.com/us/app/imtoken/id1153230571?ls=1&mt=8) | [Android](https://play.google.com/store/apps/details?id=org.consenlabs.token)
  
+ > 2 . 開設好帳戶後請如圖示，加入CRT-erc-20的合約地址
  
+ ![imTokenGetCRT1](https://github.com/blockchain01/CaratChain/blob/master/img/Screenshot_20180724-140713_imToken.jpg "imTokenGetCRT1")
  
+ ![imTokenGetCRT2](https://github.com/blockchain01/CaratChain/blob/master/img/Screenshot_20180724-140719_imToken.jpg "imTokenGetCRT2")
+  
+ ![imTokenGetCRT3](https://github.com/blockchain01/CaratChain/blob/master/img/Screenshot_20180724-140724_imToken.jpg "imTokenGetCRT3")
+ 
+ > 3 . 加入CRT-erc-20的合約地址後,即可自由交易及查看結餘。
  
  ------
  
+ ### 購買Carat Chain 代幣 CRT-erc-721
+ 
+ 
+  ------
+  
+  
  ## solidity原始代碼：
   
  ### CaratChainERC-20Token.sol
