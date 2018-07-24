@@ -110,11 +110,29 @@
   
  #### CRT-erc-721合約操作：
  
- > 3-1 . 
+ > 3-1 . name = 本代幣全名稱 
  
- > 3-2 . 
+ > 3-3 . totalSupply = CRT-erc-721的已經生產量
  
- > 3-3 . making721 = 購買CRT-erc-721代幣：
+ > 3-4 . decimals
+ 
+ > 3-5 . TokenDetails
+ 
+ > 3-6 . burn
+ 
+ > 3-7 . PublicTokenId
+
+ > 3-8 . balanceOf
+ 
+ > 3-9 . MyBuyRecord
+ 
+ > 3-10 . owner
+ 
+ > 3-11 . symbol
+ 
+ > 3-12 . Price
+ 
+ > 3-13 . making721 = 購買CRT-erc-721代幣：
  
  　> index位置填寫代幣的數據網址，填寫後請按 `寫入` / `WRITE`
   
@@ -123,17 +141,21 @@
   ![MyEtherWallet4](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-4.jpg "MyEtherWallet4")
    
 
- > 3-1 . 
+ > 3-14 . transfer
  
- > 3-1 . 
+ > 3-15 . approveAndCall
  
- > 3-1 . 
+ > 3-16 . allowance
  
- > 3-1 . 
+ > 3-17 . ChangeOwner
  
- > 3-1 . 
+ > 3-18 . ChangePrice
   
- 
+
+
+ > 3-2 . approve
+
+
   ------
   
   
