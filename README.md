@@ -173,13 +173,8 @@
   
 
 
- > 3-2 . approve
-
- > 3-7 . PublicTokenId
- 
- > 3-15 . approveAndCall
- 
- > 3-16 . allowance
+ > 這幾個為連接Dapp用，管理者跟客戶都不需亦不能使用 
+ 3-2 . approve | 3-7 . PublicTokenId | 3-15 . approveAndCall | 3-16 . allowance
 
   ------
   
