@@ -1,11 +1,11 @@
 
 ![CaratChain](https://github.com/blockchain01/CaratChain/blob/master/img/mmexport1531602574304.jpg?raw=true "CaratChain")
 
-# 中國最大的區塊鏈鑽石交易平台
+# 世界最大的區塊鏈鑽石交易平台
 
 ## 簡介：
 
- > 通過區塊鏈溯源技術及防偽技術，打造全中國最大的區塊鏈鑽石交易C2C平台。
+ > 通過區塊鏈溯源技術及防偽技術，打造全世界最大的區塊鏈鑽石交易C2C平台。
 
 
 ## 目前鑽石交易行業面臨的問題：
