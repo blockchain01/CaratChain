@@ -161,21 +161,25 @@
   ![MyEtherWallet4](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-4.jpg "MyEtherWallet4")
    
 
- > 3-14 . transfer
+ ### 3-14 . transfer = 轉帳CRT-erc-721代幣
  
- > 3-15 . approveAndCall
+   > to = 填寫收取代幣的地址
+   
+   > Id = 填寫CRT-erc-721代幣的id
+   
+ > 3-17 . ChangeOwner = 轉換本合約的管理者，限管理者使用
  
- > 3-16 . allowance
- 
- > 3-17 . ChangeOwner
- 
- > 3-18 . ChangePrice
+ > 3-18 . ChangePrice = 修改購買CRT-erc-721代幣的費用，限管理者使用 *(用`[Szabo](https://converter.murkin.me/)`計算)(必須大於0)
   
 
 
  > 3-2 . approve
 
  > 3-7 . PublicTokenId
+ 
+ > 3-15 . approveAndCall
+ 
+ > 3-16 . allowance
 
   ------
   
