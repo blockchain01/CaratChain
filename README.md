@@ -116,7 +116,7 @@
  
  > 3-4 . decimals = 小數位
  
- > ### 3-5 . TokenDetails = 每一個CRT-erc-721的獨立數據
+ ### 3-5 . TokenDetails = 每一個CRT-erc-721的獨立數據
  
    > TotalSupply = CRT-erc-721的已經生產量
    
@@ -134,29 +134,29 @@
  
  > 3-8 . balanceOf = 帳戶持有的代幣餘額
  
- > ### 3-9 . MyBuyRecord = 帳戶持有代幣的記錄
+ ### 3-9 . MyBuyRecord = 帳戶持有代幣的記錄
 
-   > MyAddress 
+   > MyAddress = 填寫需要查詢的地址
    
-   >
+   > MyTokenNumber = 填寫這地址購買次數號 *(次數號不是代幣ID號)
    
-   >
+   > MybalanceOf = 帳戶持有的代幣餘額
    
-   >
+   > NowTokenNumber = 正在查看的次數號
    
-   >
+   > ThisTokenId = 這個次數號的代幣ID
  
- > 3-10 . owner
+ > 3-10 . owner = 本合約的管理者 *(購買CRT-erc-721代幣的費用將會存入此地址)
  
- > 3-11 . symbol
+ > 3-11 . symbol = 本代幣簡稱 *(顯示於其他錢包程式)
  
- > 3-12 . Price
+ > 3-12 . Price = 購買CRT-erc-721代幣的費用 *(用`Wei`計算)
  
- > 3-13 . making721 = 購買CRT-erc-721代幣：
+ ### 3-13 . making721 = 購買CRT-erc-721代幣：
  
    > index位置填寫代幣的數據網址，填寫後請按 `寫入` / `WRITE`
   
-   > 要發送的數量 大部分的情況下此欄位應為0。在址填寫購買CRT-erc-721的費用 `以太幣`
+   > 要發送的數量...，在址填寫購買CRT-erc-721的費用 *(用`以太幣`計算)
 
   ![MyEtherWallet4](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-4.jpg "MyEtherWallet4")
    
