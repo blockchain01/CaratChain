@@ -116,7 +116,7 @@
  
  > 3-4 . decimals = 小數位
  
- > 3-5 . TokenDetails = 每一個CRT-erc-721的獨立數據
+ > ### 3-5 . TokenDetails = 每一個CRT-erc-721的獨立數據
  
    > TotalSupply = CRT-erc-721的已經生產量
    
@@ -130,13 +130,21 @@
 
   ![MyEtherWallet5](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-5.jpg "MyEtherWallet5")
    
- > 3-6 . burn
+ > 3-6 . burn = 銷毀代幣，限管理者使用，`_Id`填寫代幣的id，後請按 `寫入` / `WRITE`。
  
- > 3-7 . PublicTokenId
+ > 3-8 . balanceOf = 帳戶持有的代幣餘額
+ 
+ > ### 3-9 . MyBuyRecord = 帳戶持有代幣的記錄
 
- > 3-8 . balanceOf
- 
- > 3-9 . MyBuyRecord
+   > MyAddress 
+   
+   >
+   
+   >
+   
+   >
+   
+   >
  
  > 3-10 . owner
  
@@ -167,6 +175,7 @@
 
  > 3-2 . approve
 
+ > 3-7 . PublicTokenId
 
   ------
   
