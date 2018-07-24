@@ -104,9 +104,13 @@
  
  ![MyEtherWallet2](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-2.jpg "MyEtherWallet2")
  
- > 1 . 
+ > 3 . 這樣就打開了CRT-erc-721合約，以下將介紹合約操作
  
- > 1 . 
+  ![MyEtherWallet3](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-3.jpg "MyEtherWallet3")
+  
+ #### CRT-erc-721合約操作：
+ 
+ > 3.1 . 
  
  > 1 . 
  
