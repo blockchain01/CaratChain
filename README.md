@@ -70,10 +70,11 @@
  
  ## 操作說明：
  
+ ### 購買Carat Chain 代幣 CRT
  
+ > 1 . 請下載錢包程式imToken
  
- 
- 
+ [imToken官方網站](https://token.im/download) | [IOS](https://itunes.apple.com/us/app/imtoken/id1153230571?ls=1&mt=8) | [Android](https://play.google.com/store/apps/details?id=org.consenlabs.token)
  
  
  
