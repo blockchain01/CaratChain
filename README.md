@@ -112,10 +112,17 @@
  
  > 3-1 . 
  
- > 3-1 . 
+ > 3-2 . 
  
- > 3-1 . 
+ > 3-3 . making721 = 購買CRT-erc-721代幣：
  
+ 　> index位置填寫代幣的數據網址，填寫後請按 `寫入` / `WRITE`
+  
+   > 要發送的數量 大部分的情況下此欄位應為0。在址填寫購買CRT-erc-721的費用 `以太幣`
+
+  ![MyEtherWallet4](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-4.jpg "MyEtherWallet4")
+   
+
  > 3-1 . 
  
  > 3-1 . 
