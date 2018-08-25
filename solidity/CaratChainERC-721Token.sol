@@ -83,7 +83,7 @@ mapping(uint => uint)   TokenId;       /* 此編號代表的721代幣 */
     ) JustHoldings(_Id,msg.sender) public
         returns (bool success) {
         allowance[msg.sender][_spender] = 1;  //記錄受權額
-        emit Approval(msg.sender, _spender, _Id);  //受權時通知區塊
+        emit Approval(msg.sender, _Id, _spender);  //受權時通知區塊
         return true;   //成功通知
     }
 
@@ -223,7 +223,7 @@ mapping(uint => uint)   TokenId;       /* 此編號代表的721代幣 */
 // 轉帳時通知區塊    
         emit Transfer(_from, _to, _Id);
 //轉帳完成比較previousBalances,如不同則消耗GAS但取消所有轉帳動作
-        assert(balanceOf[_from] + balanceOf[_to] == previousBalances);
+        assert(balanceOf[_from] + balanceOf[_to] == prevusBalances);
     }
     
 
