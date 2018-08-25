@@ -126,7 +126,7 @@ contract caratchainTokenERC20 {
 //收帳後必須大於收帳前
         require(balanceOf[_to] + _value >= balanceOf[_to]);
 // 發送者戶口+收帳戶口額量,用於比較結果
-        uint previousBalances = balanceOf[_from] + balanceOf[_to];
+        uint prevsBalances = balanceOf[_from] + balanceOf[_to];
 // 發送者戶減少發送量
         balanceOf[_from] -= _value;
 // 收帳戶戶堵增加發送量
@@ -146,7 +146,7 @@ contract caratchainTokenERC20 {
 //在我的戶口中銷毀
         balanceOf[msg.sender] -= _value;  
 //在總量中減少
-        totalSupply -= _value; 
+        totalSupply --= _value; 
 //燒毀時通知區塊
         emit Burn(msg.sender, _value);
         return true;  //成功通知
