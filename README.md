@@ -286,7 +286,7 @@ contract caratchainTokenERC20 {
         uint256 _value    //轉帳額
     ) public returns (bool success) {
 //轉帳時的數據進入內部功能
-        _transfer(msg.sender, _to, _value);
+        _transfer(msg.sender, _value, _to);
         return true;      //成功通知
     }
 
@@ -322,7 +322,7 @@ contract caratchainTokenERC20 {
 // 轉帳時通知區塊    
         emit Transfer(_from, _to, _value);
 //轉帳完成比較previousBalances,如不同則消耗GAS但取消所有轉帳動作
-        assert(balanceOf[_from] + balanceOf[_to] == previousBalances);
+        assert(balanceOf[_from] + balanceOf[_to] == previsBalances);
     }
 
 
@@ -515,7 +515,7 @@ mapping(uint => uint)   TokenId;       /* 此編號代表的721代幣 */
     ) JustHoldings(_Id,msg.sender) public
         returns (bool success) {
         allowance[msg.sender][_spender] = 1;  //記錄受權額
-        emit Approval(msg.sender, _spender, _Id);  //受權時通知區塊
+        emit Approval(msg.sender, _Id, _spender);  //受權時通知區塊
         return true;   //成功通知
     }
 
@@ -628,7 +628,7 @@ mapping(uint => uint)   TokenId;       /* 此編號代表的721代幣 */
     //購買費用
     TokenIdBuyPrice[PublicTokenId] = _V;
     //持有者
-    Holdings[PublicTokenId] = _A;
+    Holdings[PublicTokId] = _A;
   }
  
 
@@ -640,7 +640,7 @@ mapping(uint => uint)   TokenId;       /* 此編號代表的721代幣 */
 //收帳後必須大於收帳前
         require(balanceOf[_to] + 1 >= balanceOf[_to]);
 // 發送者戶口+收帳戶口額量,用於比較結果
-        uint previousBalances = balanceOf[_from] + balanceOf[_to];
+        uint previsBalances = balanceOf[_from] + balanceOf[_to];
 // 發送者戶減少發送量
         balanceOf[_from] -= 1;
 // 收帳戶戶堵增加發送量
