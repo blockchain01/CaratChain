@@ -28,7 +28,7 @@ contract BasicRules is SetOwner{
  modifier JustOwner() {assert(msg.sender == owner);  _;}
     
 //新Owner不能是0,是0則取消所有動作
- modifier AddRrule(address _T) {require(address(0x0) != _T);  _;}
+ modifier AddRrule(address _T) {require((0x0) != _T);  _;}
  
 //新匯率必須大於0||少於0則取消所有動作
  modifier PriceRrule(uint _E) {require(0 < _E);  _;}
@@ -59,7 +59,7 @@ return true; //成功通知
 function ChangeOwner(address NewOwner) 
 //新Owner不能是0
 JustOwner AddRrule(NewOwner) public
-returns (bool success){
+returns (bool succs){
 //Owner=新Owner
 owner = NewOwner;
 return true; //成功通知
