@@ -91,6 +91,19 @@
  
  > 3 . 加入CRT-erc-20的合約地址後,即可自由交易及查看結餘。
  
+ ### 免費獲取CRT
+ 
+ > 1 . 請打開[網頁錢包MyEtherWallet](https://www.myetherwallet.com/#contracts)
+ 
+ ![MyEtherWallet1](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-1.jpg "MyEtherWallet1")
+ 
+ > 2 . 如圖示填寫合約地址及合約ABI | [複製ABI代碼](https://raw.githubusercontent.com/blockchain01/CaratChain/master/ABI/20ABI.code)
+ 
+ ![MyEtherWallet2](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-2.jpg "MyEtherWallet2")
+ 
+ > 3 . 這樣就打開了CRT-erc-20合約，選擇功能 FreeGetToken ,填寫您的錢包地址,即可獲得 100個CRT。
+ 
+ 
  ------
  
  ### 購買Carat Chain 代幣 CRT-erc-721
@@ -105,7 +118,7 @@
  
  ![MyEtherWallet1](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-1.jpg "MyEtherWallet1")
  
- > 2 . 如圖示填寫合約地址及合約ABI | [複製ABI代碼](https://github.com/blockchain01/CaratChain/blob/master/ABI.code)
+ > 2 . 如圖示填寫合約地址及合約ABI | [複製ABI代碼](https://raw.githubusercontent.com/blockchain01/CaratChain/master/ABI/721ABI.code)
  
  ![MyEtherWallet2](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-2.jpg "MyEtherWallet2")
  
