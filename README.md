@@ -100,7 +100,7 @@
  
  ![MyEtherWallet1](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-1.jpg "MyEtherWallet1")
  
- > 2 . 如圖示填寫合約地址及合約ABI | [複製ABI代碼](https://raw.githubusercontent.com/blockchain01/CaratChain/master/ABI/20ABI.code)
+ > 2 . 如圖示填寫合約地址及合約ABI | 0xe3aa75cdeae1bd5e02d4c130d1c55a05d35c098d | [複製ABI代碼](https://raw.githubusercontent.com/blockchain01/CaratChain/master/ABI/20ABI.code)
  
  ![MyEtherWallet2](https://github.com/blockchain01/CaratChain/blob/master/img/%E6%9C%AA%E5%91%BD%E5%90%8D-2.jpg "MyEtherWallet2")
  
