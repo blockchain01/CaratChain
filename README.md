@@ -184,33 +184,65 @@
   
  ### CaratChainERC-20Token.sol
  
- ```
- 
- //版本聲明
+```
+
+// 0x4d431a9871527ea30f0d99ef85d9561c64f51999
+
+
+//版本聲明
 pragma solidity ^0.4.24;
 
 //外部使用受權
 interface tokenRecipient { function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) external; }
 
-//合約開始
-contract caratchainTokenERC20 {
+
+/////////////////////////////////////////////////////////////////設定合約持有人
+contract SetOwner{ 
+//合約持有人地址
+    address public owner;
+
+    function SetOwner() { 
+//初始設定合約持有人  
+        owner = msg.sender;
+    }
+}
+
+
+/////////////////////////////////////////////////////////////////////////規則
+contract BasicRules is SetOwner{
+
+//驗證持有人,不是持有人則消耗GAS但取消所有動作
+ modifier JustOwner() {assert(msg.sender == owner);  _;}
     
-////////////////////////////////////////////////////////////////////////基本資料
+//新Owner不能是0,是0則取消所有動作
+ modifier AddRrule(address _T) {require(address(0x0) != _T);  _;}
+ 
+}
 
-//名,符號,小數,總量
-    string public name;
-    string public symbol;
-    uint8 public decimals = 0;
-    uint256 public totalSupply;
 
-////////////////////////////////////////////////////////////////////////個人資料
 
-//戶口
-    mapping (address => uint256) public balanceOf;
-  
-//受權額度  
-    mapping (address => mapping (address => uint256)) public allowance;
+/////////////////////////////////////////////////////////////持有人修改合約資料
+contract Admin is BasicRules {
 
+//修改-合約持有人 
+function ChangeOwner(address NewOwner) 
+//新Owner不能是0
+JustOwner AddRrule(NewOwner) public
+returns (bool success){
+//Owner=新Owner
+owner = NewOwner;
+return true; //成功通知
+}
+
+
+}
+
+
+
+
+//合約開始
+contract caratchainTokenERC20 is Admin {
+    
 
 ///////////////////////////////////////////////////////////////////////// event
 
@@ -222,31 +254,92 @@ contract caratchainTokenERC20 {
 
 //燒毀時通知區塊
     event Burn(address indexed from, uint256 value);
+    
+    
+////////////////////////////////////////////////////////////////////////基本資料
 
 
+//名,符號,小數,總量
+    string public name = "Carat Chain";
+    string public symbol = "CRT" ;
+    uint8 public decimals = 0;
+    uint256 public totalSupply = 119800000;
+    
+    
+// 免費代幣用資料
+   uint public FreeGetimit = 200000;   // 免費代幣上限
+   uint public FreeGetVol = 100; // 單個賬戶獲取代幣數量
+   uint public FreeGetped = 0; // 已派發免費代幣数量
+
+////////////////////////////////////////////////////////////////////////個人資料
+
+//戶口
+   mapping (address => uint256) public balanceOf;
+
+//已接受免費代幣的戶口
+   mapping(address => bool) public priorityClient;
+   
+//受權額度  
+    mapping (address => mapping (address => uint256)) public allowance;
 
 ////////////////////////////////////////////////////////////////////////合約功能
 
+
+
 //合約初始化
-    function caratchainTokenERC20(
-        uint256 initialSupply,//輸入初始發行量
-        string tokenName,     //輸入代幣名
-        string tokenSymbol    //輸入符號
-        
-    ) public {
-        //總量=初始發行量*十進製*小數位
-        totalSupply = initialSupply * 10 ** uint256(decimals); 
+    function caratchainTokenERC20() public {
         //初始發代幣全數給發行者
         balanceOf[msg.sender] = totalSupply;     
-        //代幣名=輸入代幣名
-        name = tokenName;       
-        //代幣符號=輸入符號
-        symbol = tokenSymbol;                 
+        //成為已接受免費獲取的戶口
+        priorityClient[msg.sender] = true;
     }
 
 
+//免費獲取代幣
+  function FreeGetToken(address client) public payable {
+    //入帳給owner  
+    owner.transfer(msg.value);
+    //驗證:未接受免費代幣||免費代幣未派完,不符則取消所有動作
+    require(priorityClient[client] != true && FreeGetped < FreeGetimit);
+    //成為已接受免費獲取的戶口
+        priorityClient[client] = true;
+    //已派發免費代幣数量+單個戶口免費獲取代幣數量
+        FreeGetped += FreeGetVol;
+    //代幣發行量+單個戶口免費獲取代幣數量
+        totalSupply += FreeGetVol;
+    // 戶口+單個戶口免費獲取代幣數量   
+        balanceOf[client] += FreeGetVol;
+  }
 
 
+
+//轉帳
+    function transfer(
+        address _to,      //收帳人
+        uint256 _value    //轉帳額
+    ) public returns (bool success) {
+//轉帳時的數據進入內部功能
+        _transfer(msg.sender, _to, _value);
+        return true;      //成功通知
+    }
+    
+
+    
+//銷毀TOKEN
+    function burn(uint256 _value) public returns (bool success) {
+//銷毀量少於戶口現有額
+        require(balanceOf[msg.sender] >= _value); 
+//在我的戶口中銷毀
+        balanceOf[msg.sender] -= _value;  
+//在總量中減少
+        totalSupply -= _value; 
+//燒毀時通知區塊
+        emit Burn(msg.sender, _value);
+        return true;  //成功通知
+    }
+    
+
+    
 //受權額度給其他人
     function approve(
         address _spender, //被受權者戶口
@@ -259,6 +352,19 @@ contract caratchainTokenERC20 {
     }
 
 
+
+//受權額度轉帳
+    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
+//轉帳額少於受權額度
+        require(_value <= allowance[_from][msg.sender]);
+//受權轉帳額度減轉帳額
+        allowance[_from][msg.sender] -= _value;
+//轉帳時的數據進入內部功能
+        _transfer(_from, _to, _value);
+        return true;     //成功通知
+    }
+    
+    
 //在其他DAPP顯示
     function approveAndCall(
         address _spender,  //被受權者戶口
@@ -277,32 +383,7 @@ contract caratchainTokenERC20 {
     }
 
 
-
-
-
-//轉帳
-    function transfer(
-        address _to,      //收帳人
-        uint256 _value    //轉帳額
-    ) public returns (bool success) {
-//轉帳時的數據進入內部功能
-        _transfer(msg.sender, _value, _to);
-        return true;      //成功通知
-    }
-
-
-//受權額度轉帳
-    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
-//轉帳額少於受權額度
-        require(_value <= allowance[_from][msg.sender]);
-//受權轉帳額度減轉帳額
-        allowance[_from][msg.sender] -= _value;
-//轉帳時的數據進入內部功能
-        _transfer(_from, _to, _value);
-        return true;     //成功通知
-    }
-
-
+////////////////////////////////////////////////////////////////////////內部功能
 
 
 //轉帳時的內部功能
@@ -322,23 +403,11 @@ contract caratchainTokenERC20 {
 // 轉帳時通知區塊    
         emit Transfer(_from, _to, _value);
 //轉帳完成比較previousBalances,如不同則消耗GAS但取消所有轉帳動作
-        assert(balanceOf[_from] + balanceOf[_to] == previsBalances);
+        assert(balanceOf[_from] + balanceOf[_to] == previousBalances);
     }
 
 
 
-//銷毀TOKEN
-    function burn(uint256 _value) public returns (bool success) {
-//銷毀量少於戶口現有額
-        require(balanceOf[msg.sender] >= _value); 
-//在我的戶口中銷毀
-        balanceOf[msg.sender] -= _value;  
-//在總量中減少
-        totalSupply -= _value; 
-//燒毀時通知區塊
-        emit Burn(msg.sender, _value);
-        return true;  //成功通知
-    }
 }
 
 ```
