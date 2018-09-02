@@ -75,11 +75,11 @@ contract caratchainTokenERC20 is Admin {
     string public name = "Carat Chain";
     string public symbol = "CRT" ;
     uint8 public decimals = 0;
-    uint256 public totalSupply = 119900000;
+    uint256 public totalSupply = 119800000;
     
     
 // 免費代幣用資料
-   uint public FreeGetimit = 100000;   // 免費代幣上限
+   uint public FreeGetimit = 200000;   // 免費代幣上限
    uint public FreeGetVol = 100; // 單個賬戶獲取代幣數量
    uint public FreeGetped = 0; // 已派發免費代幣数量
 
